@@ -31,7 +31,7 @@
 		<texturenofocus>-</texturenofocus>
 		<texturefocus border="0,0,14,0">buttons/select/right-11.png</texturefocus>
 		<alttexturenofocus>-</alttexturenofocus>
-		<alttexturefocus>common/white.png</alttexturefocus>
+		<alttexturefocus border="0,0,14,0">buttons/select/right-11.png</alttexturefocus>
 		<colordiffuse>Menu-Item-Bar</colordiffuse>
 	</include>
 	<include name="Menu-Text-Bar-Group">
