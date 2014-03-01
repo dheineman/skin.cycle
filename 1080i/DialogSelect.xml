@@ -78,8 +78,8 @@
 				<height>480</height>
 				<onleft>5</onleft>
 				<onright>5</onright>
-				<onup>6</onup>
-				<ondown>6</ondown>
+				<onup>3</onup>
+				<ondown>3</ondown>
 				<itemlayout height="80">
 					<control type="label">
 						<posx>36</posx>
