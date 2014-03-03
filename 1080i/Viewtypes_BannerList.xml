@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+
+	<include name="Viewtypes_BannerList">
+		<control type="group">
+			<visible>Control.IsVisible(52) + !Window.IsActive(movieinformation)</visible>
+
+			<control type="fixedlist" id="52">
+				<posx>200</posx>
+				<posy>110</posy>
+				<width>1520</width>
+				<height>935</height>
+				<viewtype label="Banner List">list</viewtype>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+				<scrolltime>400</scrolltime>
+				<orientation>vertical</orientation>
+				<focusposition>2</focusposition>
+
+
+				<itemlayout height="150">
+					<!-- Information Area -->
+					<control type="group">
+						<posx>410</posx>
+						<posy>0</posy>
+						<width>1110</width>
+						<height>150</height>
+
+						<!-- Item Number -->
+						<control type="label">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>128</width>
+							<height>75</height>
+							<label>$INFO[ListItem.episode, 0]</label>
+							<textcolor>ffaaaaaa</textcolor>
+							<font>Font-View-List-Number</font>
+							<align>left</align>
+							<visible>!IntegerGreaterThan(ListItem.Episode,9)</visible>
+						</control>
+
+						<control type="label">
+							<posx>15</posx>
+							<posy>0</posy>
+							<width>128</width>
+							<height>75</height>
+							<label>$INFO[ListItem.episode]</label>
+							<textcolor>ffaaaaaa</textcolor>
+							<font>Font-View-List-Number</font>
+							<align>left</align>
+							<visible>IntegerGreaterThan(ListItem.Episode,9)</visible>
+						</control>
+
+						<!-- Item Title -->
+						<control type="label">
+							<posx>145</posx>
+							<posy>5</posy>
+							<width>967</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Title]</label>
+							<textcolor>ffaaaaaa</textcolor>
+							<font>Font-View-List-Title</font>
+						</control>
+
+						<!-- Item Release Date -->
+						<control type="label">
+							<posx>145</posx>
+							<posy>47</posy>
+							<width>200</width>
+							<height>27</height>
+							<label>$INFO[ListItem.Premiered]</label>
+							<textcolor>ffaaaaaa</textcolor>
+							<font>Font-View-List-Date</font>
+						</control>
+
+						<!-- Item Duration -->
+						<control type="label">
+							<posx>255</posx>
+							<posy>47</posy>
+							<width>200</width>
+							<height>27</height>
+							<label>$INFO[ListItem.Duration, , minutes]</label>
+							<textcolor>ffaaaaaa</textcolor>
+							<font>Font-View-List-Date</font>
+						</control>
+					</control>
+				</itemlayout>
+
+				<focusedlayout height="335">
+					
+					<control type="group">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>410</width>
+						<height>300</height>
+
+						<control type="image">
+							<posx>0</posx>
+							<posy>10</posy>
+							<width>415</width>
+							<height>235</height>
+							<texture border="8">common/white8.png</texture>
+							<colordiffuse>Views-Wall-InfoPanel</colordiffuse>
+						</control>
+
+						<!-- Item Icon -->
+						<control type="image">
+							<posx>5</posx>
+							<posy>15</posy>
+							<width>410</width>
+							<height>225</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio align="left" aligny="top">stretch</aspectratio> <!-- Not good for the image -->
+						</control>
+					</control>
+
+					<control type="group">
+						<posx>410</posx>
+						<posy></posy>
+
+						<!-- White Area -->
+						<control type="image">
+							<posx>0</posx>
+							<posy>116</posy>
+							<width>1110</width>
+							<height>129</height>
+							<texture>common/white.png</texture>
+							<colordiffuse>Menu-Item-Bar</colordiffuse>
+						</control>
+
+						<!-- Item Number Background -->
+						<control type="image">
+							<posx>0</posx>
+							<posy>15</posy>
+							<width>128</width>
+							<height>111</height>
+							<texture border="0,0,14,14" colordiffuse="Menu-Select">buttons/select/right-invert-11.png</texture>
+						</control>
+
+						<!-- Item Number -->
+						<control type="label">
+							<posx>0</posx>
+							<posy>38</posy>
+							<width>128</width>
+							<label>$INFO[ListItem.episode, 0]</label>
+							<textcolor>Views-Text-Title</textcolor>
+							<font>Font-View-List-Number</font>
+							<visible>!IntegerGreaterThan(ListItem.Episode,9)</visible>
+						</control>
+
+						<control type="label">
+							<posx>20</posx>
+							<posy>38</posy>
+							<width>128</width>
+							<label>$INFO[ListItem.episode]</label>
+							<textcolor>Views-Text-Title</textcolor>
+							<font>Font-View-List-Number</font>
+							<visible>IntegerGreaterThan(ListItem.Episode,9)</visible>
+						</control>
+
+						<!-- Item Title -->
+						<control type="label">
+							<posx>145</posx>
+							<posy>38</posy>
+							<width>775</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Title]</label>
+							<textcolor>Menu-Text-FO</textcolor>
+							<font>Font-View-List-Title</font>
+						</control>
+
+						<!-- Item Release Date -->
+						<control type="label">
+							<posx>145</posx>
+							<posy>85</posy>
+							<width>200</width>
+							<height>17</height>
+							<label>$INFO[ListItem.Premiered]</label>
+							<textcolor>Views-Text-Genre</textcolor>
+							<font>Font-View-List-Date</font>
+						</control>
+
+						<!-- Item Duration -->
+						<control type="label">
+							<posx>255</posx>
+							<posy>85</posy>
+							<width>200</width>
+							<height>17</height>
+							<label>$INFO[ListItem.Duration, , minutes]</label>
+							<textcolor>Views-Text-Genre</textcolor>
+							<font>Font-View-List-Date</font>
+						</control>
+
+						<!-- Item Plot -->
+						<control type="textbox">
+							<posx>64</posx>
+							<posy>135</posy>
+							<width>1010</width>
+							<height>94</height>
+							<align>left</align>
+							<font>Font-View-List-Plot</font>
+							<label>$INFO[ListItem.Plot]</label>
+							<textcolor>Views-Text-Plot</textcolor>
+							<shadowcolor>00000000</shadowcolor>
+						</control>
+					</control>				
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+
+</includes>
